@@ -268,7 +268,7 @@ case when product_id= 1 then  m.price*20
 	
   when product_id != 1  and s.order_date<me.join_date then  m.price*10
     
-    when  (s.order_date between me.join_date and me.join_date + 6 )  then  m.price*20
+  when  (s.order_date between me.join_date and me.join_date + 6 )  then  m.price*20
 
 else m.price*10
 
