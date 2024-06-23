@@ -6,7 +6,6 @@
 
 #1. What is the total amount each customer spent at the restaurant?
 
-use dannys_diner;
 select s.customer_id, sum(m.price) as "Total spend amount"
 from sales s
 join menu m on m.product_id=s.product_id
@@ -16,7 +15,7 @@ group by customer_id
 
 #2.How many days has each customer visited the restaurant?.
 
-use dannys_diner;
+
 select customer_id,  count(distinct (order_date)) as "Day_visited"
 from sales s
 group by customer_id
@@ -24,11 +23,13 @@ group by customer_id
 ![Screenshot 2024-06-23 105324](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/9e516e34-5750-40bf-b026-ed4a7b5b385f)
 
 #3 What was the first item from the menu purchased by each customer?
-use dannys_diner;
+
+
 with first_item as (select s.customer_id, m.product_name,s.order_date, dense_rank () over (partition by s.customer_id order by s.order_date) as "rank_by_date"
 from sales s
 join menu m on m.product_id=s.product_id) 
-select customer_id, product_name
+select 
+  customer_id, product_name
 from first_item
 where rank_by_date = 1
 group by customer_id, product_name
