@@ -1,6 +1,11 @@
 # Case-Study-1---Danny-s-Diner
+![Screenshot 2024-06-23 104807](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/7feb7daa-3588-4e7f-8f5a-af4b006ae2c6)
+![Screenshot 2024-06-23 104310](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/13edd1ed-cb6b-476a-9c66-8a865fd01003)
+![Screenshot 2024-06-23 104353](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/ee5f2af6-1fae-44d0-b31b-201a20cf83c1)
+![Screenshot 2024-06-23 104410](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/265de980-0d13-4f5e-8420-19e2c8af065e)
 
-![Screenshot 2024-06-23 104410](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/97fba74e-59b4-4c36-a8d8-3b0ce7ce7133)
-![Screenshot 2024-06-23 104353](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/2827382f-9620-4c0a-a1ac-cd1eb3ecec28)
-![Screenshot 2024-06-23 104253](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/7a5ad23a-800e-476d-ae18-81cfd3fee26c)
-![Screenshot 2024-06-23 104310](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/5ee8432c-ddf3-46a1-9367-dc9c370f5e89)
+
+
+
+
+
