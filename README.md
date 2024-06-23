@@ -7,8 +7,11 @@
 #1. What is the total amount each customer spent at the restaurant?
 
 select s.customer_id, sum(m.price) as "Total spend amount"
+
 from sales s
+
 join menu m on m.product_id=s.product_id
+
 group by customer_id
 
 ![q1Screenshot 2024-06-23 105227](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/a239d949-d597-45f0-8780-d57d457b231d)
