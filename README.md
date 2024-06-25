@@ -98,7 +98,7 @@ VALUES
   ('B', '2021-01-09');
 
 
-# 1. What is the total amount each customer spent at the restaurant?#
+# 1. What is the total amount each customer spent at the restaurant?
 
 
 select s.customer_id, sum(m.price) as "Total spend amount"
@@ -112,7 +112,7 @@ group by customer_id
 ![q1Screenshot 2024-06-23 105227](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/a239d949-d597-45f0-8780-d57d457b231d)
 
 
-# 2.How many days has each customer visited the restaurant?.#
+# 2.How many days has each customer visited the restaurant?
 
 
 select customer_id,  count(distinct (order_date)) as "Day_visited"
@@ -123,7 +123,7 @@ group by customer_id
 
 ![Screenshot 2024-06-23 105324](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/9e516e34-5750-40bf-b026-ed4a7b5b385f)
 
-# 3 What was the first item from the menu purchased by each customer?#
+# 3 What was the first item from the menu purchased by each customer?
 
 
 with first_item as (select s.customer_id, m.product_name,s.order_date, dense_rank () over (partition by s.customer_id order by s.order_date) as "rank_by_date"
@@ -144,7 +144,7 @@ group by customer_id, product_name
 
 ![q3Screenshot 2024-06-23 105418](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/098e204a-0f6a-4bee-9589-af120cab4bfc)
 
-# 4 What is the most purchased item on the menu and how many times was it purchased by all customers?#
+# 4 What is the most purchased item on the menu and how many times was it purchased by all customers?
 
 
 select m.product_name, count(s.order_date) as total_order
@@ -161,7 +161,7 @@ limit 1
 
 ![Screenshot 2024-06-23 110135](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/cc8ab94d-61a1-4944-ab3a-712e8a928d1c)
 
-# 5 Which item was the most popular for each customer?#
+# 5 Which item was the most popular for each customer?
 
 WITH popular_item as (
 
@@ -182,7 +182,7 @@ where ranking=1
 
 ![Screenshot 2024-06-23 110219](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/a1e7aab7-d61c-4ee9-8c08-5e31a1eb1d21)
 
-# 6. Which item was purchased first by the customer after they became a member?#
+# 6. Which item was purchased first by the customer after they became a member?
 
 WITH member_order as (select m.product_name, s.customer_id, s.order_date, dense_rank() over(partition by s.customer_id order by s.order_date) as ranking
 
@@ -203,7 +203,7 @@ where ranking = 1
 
 ![Screenshot 2024-06-23 110454](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/6d6d0a2f-76b5-409e-9634-2408b906343b)
 
-# 7 Which item was purchased just before the customer became a member?#
+# 7 Which item was purchased just before the customer became a member?
 
 with member_order as (select s.customer_id,m.product_name, s.order_date, dense_rank() over(partition by s.customer_id order by s.order_date) as ranking
 
@@ -241,7 +241,7 @@ group by s.customer_id
 
 ![Screenshot 2024-06-23 110617](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/46420fa1-f804-4228-8d01-66d05b270c6a)
 
-# 9 If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?#
+# 9 If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 
 select S.customer_id, SUM(
 
@@ -259,8 +259,7 @@ group by s.customer_id
 
 ![Screenshot 2024-06-23 110759](https://github.com/susmitagupta10/Case-Study-1---Danny-s-Diner/assets/166834605/4e9d8d1b-58b2-49a2-aeff-c8f61b83b6d2)
 
-# 10 In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - 
-how many points do customer A and B have at the end of January?#
+# 10 In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
 
 select S.customer_id, sum(
 
